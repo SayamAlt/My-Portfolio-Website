@@ -1,4 +1,38 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "post") {
+    // Get form data
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+
+    // Email configuration
+    $to = "sayamk565@gmail.com"; // Replace with your email address
+    $subject = "New Contact Form Submission";
+    $headers = "From: $email";
+
+    // Compose the email message
+    $email_message = "Name: $name\n";
+    $email_message .= "Email: $email\n\n";
+    $email_message .= "Message:\n$message";
+
+    // Send email
+    mail($to, $subject, $email_message, $headers);
+
+    // Redirect back to the form with a success message
+    header("Location: ../index.html?status=success");
+} else {
+    // If the form is not submitted, redirect to the form page
+    header("Location: ../index.html");
+}
+?>
+
+
+
+
+
+
+
+<!-- <?php
   /**
   * Requires the "PHP Email Form" library
   * The "PHP Email Form" library is available only in the pro version of the template
@@ -7,9 +41,9 @@
   */
 
   // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+  $receiving_email_address = 'sayamk565@gmail.com';
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
+  if( file_exists($php_email_form = '../assets/vendor/php-email-form/validate.js' )) {
     include( $php_email_form );
   } else {
     die( 'Unable to load the "PHP Email Form" Library!');
@@ -38,4 +72,4 @@
   $contact->add_message( $_POST['message'], 'Message', 10);
 
   echo $contact->send();
-?>
+?> -->
