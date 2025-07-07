@@ -119,6 +119,16 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
+.profile-square {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 16px; /* Square with rounded corners */
+  border: 2px solid #ccc;
+  margin: 0 auto;
+  display: block;
+}
+
 #main {
   margin-left: 300px;
 }
