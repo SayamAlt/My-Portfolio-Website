@@ -1,4 +1,4 @@
-# Sayam Kumar – Portfolio Website
+## Sayam Kumar – Portfolio Website
 
 Welcome to my personal portfolio website, built using the [iPortfolio](https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/) template by BootstrapMade. This site showcases my professional background, technical skills, featured projects, and contact information.
 
